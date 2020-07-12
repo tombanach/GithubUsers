@@ -18,6 +18,13 @@ namespace GithubUsers.ViewModels
             Initialize();
         }
 
+        private string _avatar;
+        public string AvatarUrl
+        {
+            get => _avatar;
+            set => SetProperty(ref _avatar, value);
+        }
+
         private string _login;
         public string Login
         {
@@ -32,11 +39,28 @@ namespace GithubUsers.ViewModels
             set => SetProperty(ref _city, value);
         }
 
+        private int _followers;
+        public int Followers
+        {
+            get => _followers;
+            set => SetProperty(ref _followers, value);
+        }
+
+        private int _following;
+        public int Following
+        {
+            get => _following;
+            set => SetProperty(ref _following, value);
+        }
+
         private async Task Initialize()
         {
             var userDetails = await GetResponse<UserForDetails>($"{App.ApiUrl}/{_userForList.Login}");
             Login = userDetails.Login;
             City = userDetails.Location;
+            AvatarUrl = userDetails.AvatarUrl;
+            Followers = userDetails.Followers;
+            Following = userDetails.Following;
         }
     }
 }

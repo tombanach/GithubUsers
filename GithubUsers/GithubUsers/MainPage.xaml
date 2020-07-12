@@ -7,7 +7,7 @@
              xmlns:models="clr-namespace:GithubUsers.Models"
              x:Class="GithubUsers.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="15">
         <ListView ItemsSource="{Binding UsersForList}"
                   x:Name="UserList"
                   ItemTapped="UserList_OnItemTapped"
@@ -17,8 +17,8 @@
                     <ViewCell>
                         <Grid>
                             <StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Login}" />
-                                <Label Text="{Binding ISO2}" />
+                                <Label Text="{Binding Login}" FontAttributes="Bold" FontFamily="Comic Sans MS"/>
+                                <Label Text="{Binding ISO2}" HorizontalOptions="Start"/>
                             </StackLayout>
                         </Grid>
                     </ViewCell>

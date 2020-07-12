@@ -9,18 +9,31 @@
     <ScrollView>
         <Grid>
             <StackLayout Padding="15">
-                <Label Text="Login" />
-                <Label Text="{Binding Login}" />
+                <Image Source="{Binding AvatarUrl}" />
                 <BoxView
                     WidthRequest="1"
                     HeightRequest="1"
                     BackgroundColor="LightGray" />
-                <Label Text="Location" />
-                <Label Text="{Binding City}" />
+                <Label Text="Login" Style="{StaticResource TitleStyle}"/>
+                <Label Text="{Binding Login}" Style="{StaticResource ContentStyle}"/>
                 <BoxView
                     WidthRequest="1"
                     HeightRequest="1"
                     BackgroundColor="LightGray" />
+                <Label Text="Location" Style="{StaticResource TitleStyle}"/>
+                <Label Text="{Binding City}" Style="{StaticResource ContentStyle}"/>
+                <BoxView
+                    WidthRequest="1"
+                    HeightRequest="1"
+                    BackgroundColor="LightGray" />
+                <Label Text="Followers" Style="{StaticResource TitleStyle}"/>
+                <Label Text="{Binding Followers}" Style="{StaticResource ContentStyle}"/>
+                <BoxView
+                    WidthRequest="1"
+                    HeightRequest="1"
+                    BackgroundColor="LightGray" />
+                <Label Text="Following" Style="{StaticResource TitleStyle}"/>
+                <Label Text="{Binding Following}" Style="{StaticResource ContentStyle}"/>
             </StackLayout>
         </Grid>
     </ScrollView>
